@@ -3,6 +3,16 @@ entries:
   event-generator:
   - apiVersion: v2
     appVersion: 0.10.0
+    created: "2023-10-19T15:00:53.454072224Z"
+    description: A Helm chart used to deploy the event-generator in Kubernetes cluster.
+    digest: 036ac5860ae22b43927a2d630bfcd52b0258429fa6c131f411febdd59f62aea6
+    name: event-generator
+    type: application
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/event-generator-0.3.1/event-generator-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: 0.10.0
     created: "2023-10-19T14:25:52.019169322Z"
     description: A Helm chart used to deploy the event-generator in Kubernetes cluster.
     digest: 3a160d30a59cf0896c0255e3b19baf810ce3021fa8f17d0446c2d332f1edb11b
@@ -993,4 +1003,4 @@ entries:
     urls:
     - https://github.com/falcosecurity/charts/releases/download/falcosidekick-0.1.20/falcosidekick-0.1.20.tgz
     version: 0.1.20
-generated: "2023-10-19T14:54:13.548769815Z"
+generated: "2023-10-19T15:00:53.454180025Z"
