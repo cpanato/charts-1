@@ -24,6 +24,34 @@ entries:
   falco:
   - apiVersion: v2
     appVersion: 0.36.1
+    created: "2023-10-20T08:04:59.215333759Z"
+    dependencies:
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: https://falcosecurity.github.io/charts
+      version: 0.7.1
+    description: Falco
+    digest: 2942ab498533ebcb4407ea3a2816dd47318b63b64bd244db18503a41dfb9010b
+    home: https://falco.org
+    icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/falco/horizontal/color/falco-horizontal-color.svg
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    - metric
+    - troubleshooting
+    - run-time
+    maintainers:
+    - email: cncf-falco-dev@lists.cncf.io
+      name: The Falco Authors
+    name: falco
+    sources:
+    - https://github.com/falcosecurity/falco
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falco-3.8.1/falco-3.8.1.tgz
+    version: 3.8.1
+  - apiVersion: v2
+    appVersion: 0.36.1
     created: "2023-10-19T14:25:52.221631782Z"
     dependencies:
     - condition: falcosidekick.enabled
@@ -685,6 +713,26 @@ entries:
   falcosidekick:
   - apiVersion: v1
     appVersion: 2.28.0
+    created: "2023-10-20T08:04:59.399511672Z"
+    description: Connect Falco to your ecosystem
+    digest: 87e936ae6d10400f160989250d9b2c1fda65d99d3889ed1b85dbdebc37ccd549
+    home: https://github.com/falcosecurity/falcosidekick
+    icon: https://raw.githubusercontent.com/falcosecurity/falcosidekick/master/imgs/falcosidekick_color.png
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    maintainers:
+    - email: cncf-falco-dev@lists.cncf.io
+      name: Issif
+    name: falcosidekick
+    sources:
+    - https://github.com/falcosecurity/falcosidekick
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falcosidekick-0.7.5/falcosidekick-0.7.5.tgz
+    version: 0.7.5
+  - apiVersion: v1
+    appVersion: 2.28.0
     created: "2023-10-19T14:25:52.578762016Z"
     description: Connect Falco to your ecosystem
     digest: b1a0338b64bf436de68e100d114f0d2ac58e386a06cc698f314b1d433acdaf55
@@ -1003,4 +1051,4 @@ entries:
     urls:
     - https://github.com/falcosecurity/charts/releases/download/falcosidekick-0.1.20/falcosidekick-0.1.20.tgz
     version: 0.1.20
-generated: "2023-10-19T15:00:53.454180025Z"
+generated: "2023-10-20T08:04:59.399807483Z"
