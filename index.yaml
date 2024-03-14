@@ -44,6 +44,38 @@ entries:
   falco:
   - apiVersion: v2
     appVersion: 0.37.1
+    created: "2024-03-14T08:18:34.554768189Z"
+    dependencies:
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: https://falcosecurity.github.io/charts
+      version: 0.7.15
+    - condition: collectors.kubernetes.enabled
+      name: k8s-metacollector
+      repository: https://falcosecurity.github.io/charts
+      version: 0.1.*
+    description: Falco
+    digest: c5fe3c475bffed1730a07216945bf48932b6049ef993eb3c62912d156eb9a61c
+    home: https://falco.org
+    icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/falco/horizontal/color/falco-horizontal-color.svg
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    - metric
+    - troubleshooting
+    - run-time
+    maintainers:
+    - email: cncf-falco-dev@lists.cncf.io
+      name: The Falco Authors
+    name: falco
+    sources:
+    - https://github.com/falcosecurity/falco
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falco-4.2.4/falco-4.2.4.tgz
+    version: 4.2.4
+  - apiVersion: v2
+    appVersion: 0.37.1
     created: "2024-02-14T14:04:38.155444582Z"
     dependencies:
     - condition: falcosidekick.enabled
@@ -534,6 +566,28 @@ entries:
   falco-exporter:
   - apiVersion: v2
     appVersion: 0.8.3
+    created: "2024-03-14T08:18:34.705859662Z"
+    description: Prometheus Metrics Exporter for Falco output events
+    digest: 1be1c5bca5f6cd0f7157125f351e6ededdfadee9e51114cc706682bd964d35af
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    - metric
+    - troubleshooting
+    - run-time
+    maintainers:
+    - email: me@leonardograsso.com
+      name: leogr
+    name: falco-exporter
+    sources:
+    - https://github.com/falcosecurity/falco-exporter
+    type: application
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falco-exporter-0.9.11/falco-exporter-0.9.11.tgz
+    version: 0.9.11
+  - apiVersion: v2
+    appVersion: 0.8.3
     created: "2024-02-14T14:04:38.270453953Z"
     description: Prometheus Metrics Exporter for Falco output events
     digest: 072dc76f8733c6aac6fc220561479671e90f26f6feea3e63bb25acbdc33c6890
@@ -841,6 +895,26 @@ entries:
     - https://github.com/falcosecurity/charts/releases/download/falco-exporter-0.3.0/falco-exporter-0.3.0.tgz
     version: 0.3.0
   falcosidekick:
+  - apiVersion: v1
+    appVersion: 2.28.0
+    created: "2024-03-14T08:18:34.85244974Z"
+    description: Connect Falco to your ecosystem
+    digest: 629760ec0de244b62deb3b0b0227872d7a1b711ce23d281dd83ae72421d47f9f
+    home: https://github.com/falcosecurity/falcosidekick
+    icon: https://raw.githubusercontent.com/falcosecurity/falcosidekick/master/imgs/falcosidekick_color.png
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    maintainers:
+    - email: cncf-falco-dev@lists.cncf.io
+      name: Issif
+    name: falcosidekick
+    sources:
+    - https://github.com/falcosecurity/falcosidekick
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falcosidekick-0.7.15/falcosidekick-0.7.15.tgz
+    version: 0.7.15
   - apiVersion: v1
     appVersion: 2.28.0
     created: "2024-02-14T14:04:38.388730231Z"
@@ -1276,4 +1350,4 @@ entries:
     urls:
     - https://github.com/cpanato/charts-1/releases/download/k8s-metacollector-0.1.2/k8s-metacollector-0.1.2.tgz
     version: 0.1.2
-generated: "2024-02-14T14:04:38.504294089Z"
+generated: "2024-03-14T08:18:34.85276547Z"
