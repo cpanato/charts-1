@@ -3,6 +3,16 @@ entries:
   event-generator:
   - apiVersion: v2
     appVersion: 0.10.0
+    created: "2024-12-24T09:46:07.2440692Z"
+    description: A Helm chart used to deploy the event-generator in Kubernetes cluster.
+    digest: 7c0df302ad7ea6ec1b6f136406e10bde06bcc24a51d28e67ecc1e2a68f45fbfe
+    name: event-generator
+    type: application
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/event-generator-0.3.4/event-generator-0.3.4.tgz
+    version: 0.3.4
+  - apiVersion: v2
+    appVersion: 0.10.0
     created: "2024-02-14T14:04:38.03580098Z"
     description: A Helm chart used to deploy the event-generator in Kubernetes cluster.
     digest: 9b4623480cdcc5333521d7bd37bdfb083e89020c9093e5af12b872045bb9808a
@@ -42,6 +52,38 @@ entries:
     - https://github.com/cpanato/charts-1/releases/download/event-generator-0.3.0/event-generator-0.3.0.tgz
     version: 0.3.0
   falco:
+  - apiVersion: v2
+    appVersion: 0.39.2
+    created: "2024-12-24T09:46:07.420377658Z"
+    dependencies:
+    - condition: falcosidekick.enabled
+      name: falcosidekick
+      repository: https://falcosecurity.github.io/charts
+      version: 0.9.*
+    - condition: collectors.kubernetes.enabled
+      name: k8s-metacollector
+      repository: https://falcosecurity.github.io/charts
+      version: 0.1.*
+    description: Falco
+    digest: 5ce71fa4e56ae9bfefd347fc41fe3a622b3cd4979eaeeb15e29fde4911320d5d
+    home: https://falco.org
+    icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/falco/horizontal/color/falco-horizontal-color.svg
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    - metric
+    - troubleshooting
+    - run-time
+    maintainers:
+    - email: cncf-falco-dev@lists.cncf.io
+      name: The Falco Authors
+    name: falco
+    sources:
+    - https://github.com/falcosecurity/falco
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falco-4.17.0/falco-4.17.0.tgz
+    version: 4.17.0
   - apiVersion: v2
     appVersion: 0.37.1
     created: "2024-04-19T10:15:38.231395362Z"
@@ -598,6 +640,28 @@ entries:
   falco-exporter:
   - apiVersion: v2
     appVersion: 0.8.3
+    created: "2024-12-24T09:46:07.615763332Z"
+    description: Prometheus Metrics Exporter for Falco output events
+    digest: 2b2ba10fa6c97bcfbd1a44a1ec365686c124bc590b5e3cf04fa757d1689494a9
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    - metric
+    - troubleshooting
+    - run-time
+    maintainers:
+    - email: me@leonardograsso.com
+      name: leogr
+    name: falco-exporter
+    sources:
+    - https://github.com/falcosecurity/falco-exporter
+    type: application
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falco-exporter-0.12.1/falco-exporter-0.12.1.tgz
+    version: 0.12.1
+  - apiVersion: v2
+    appVersion: 0.8.3
     created: "2024-04-19T10:15:38.375366525Z"
     description: Prometheus Metrics Exporter for Falco output events
     digest: 03c17bcae7789db288afb38db8240be14255c942fec984eae62146ba370f89ce
@@ -948,7 +1012,50 @@ entries:
     urls:
     - https://github.com/falcosecurity/charts/releases/download/falco-exporter-0.3.0/falco-exporter-0.3.0.tgz
     version: 0.3.0
+  falco-talon:
+  - apiVersion: v1
+    appVersion: 0.2.1
+    created: "2024-12-24T09:46:07.791914793Z"
+    description: React to the events from Falco
+    digest: cbbd8b608659cf9163b240fafc15e9fb4359dca3186632caf15d27ddd507135d
+    home: https://github.com/falcosecurity/falco-talon
+    keywords:
+    - falco
+    - monitoring
+    - security
+    - response-engine
+    maintainers:
+    - email: issif+github@gadz.org
+      name: Issif
+    - email: igoreulalio.ie@gmail.com
+      name: IgorEulalio
+    name: falco-talon
+    sources:
+    - https://github.com/falcosecurity/falco-talon
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falco-talon-0.2.2/falco-talon-0.2.2.tgz
+    version: 0.2.2
   falcosidekick:
+  - apiVersion: v1
+    appVersion: 2.30.0
+    created: "2024-12-24T09:46:08.057340806Z"
+    description: Connect Falco to your ecosystem
+    digest: 555cbd630856de6c8ef04aa7c4ff200270aa0b16a2596c58bb01803602ff20b4
+    home: https://github.com/falcosecurity/falcosidekick
+    icon: https://raw.githubusercontent.com/falcosecurity/falcosidekick/master/imgs/falcosidekick_color.png
+    keywords:
+    - monitoring
+    - security
+    - alerting
+    maintainers:
+    - email: cncf-falco-dev@lists.cncf.io
+      name: Issif
+    name: falcosidekick
+    sources:
+    - https://github.com/falcosecurity/falcosidekick
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/falcosidekick-0.9.4/falcosidekick-0.9.4.tgz
+    version: 0.9.4
   - apiVersion: v1
     appVersion: 2.28.0
     created: "2024-04-19T10:15:38.53456041Z"
@@ -1391,6 +1498,23 @@ entries:
     version: 0.1.20
   k8s-metacollector:
   - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2024-12-24T09:46:08.269008563Z"
+    description: Install k8s-metacollector to fetch and distribute Kubernetes metadata
+      to Falco instances.
+    digest: e2e8a51978bcdf830ba9af65b39ca861a437dbc5081ef160dbeafa7b93858ec8
+    home: https://github.com/falcosecurity/k8s-metacollector
+    maintainers:
+    - email: cncf-falco-dev@lists.cncf.io
+      name: The Falco Authors
+    name: k8s-metacollector
+    sources:
+    - https://github.com/falcosecurity/k8s-metacollector
+    type: application
+    urls:
+    - https://github.com/cpanato/charts-1/releases/download/k8s-metacollector-0.1.10/k8s-metacollector-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2024-02-14T14:04:38.504014718Z"
     description: Install k8s-metacollector to fetch and distribute Kubernetes metadata
@@ -1424,4 +1548,4 @@ entries:
     urls:
     - https://github.com/cpanato/charts-1/releases/download/k8s-metacollector-0.1.2/k8s-metacollector-0.1.2.tgz
     version: 0.1.2
-generated: "2024-04-19T10:15:38.534850961Z"
+generated: "2024-12-24T09:46:08.269283776Z"
